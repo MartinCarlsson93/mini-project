@@ -33,7 +33,7 @@ h1 {
   color: $black-color;
 }
 h2 {
-    margin: 0;
+  margin: 0;
   font-family: "DM Sans";
   font-style: normal;
   font-weight: 700;
@@ -42,13 +42,13 @@ h2 {
   color: $grey-800;
 }
 h3 {
-    font-family: "DM Sans";
-    font-style: normal;
-    font-weight: 700;
-    font-size: 28px;
-    line-height: 28px;
-    color: $grey-700;
-  }
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 28px;
+  color: $grey-700;
+}
 h4 {
   font-family: "DM Sans";
   font-style: normal;
@@ -67,16 +67,16 @@ body {
 }
 
 @mixin single-text-large {
-    font-family: 'DM Sans';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 20px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
 
-    color: $grey-500
-};
+  color: $grey-500;
+}
 
 // Buttons
 
@@ -95,19 +95,19 @@ body {
   @include btn($grey-600, $white-color);
 }
 
-.primarybtn:hover{
-    @include btn($grey-100, $white-color);
-    cursor: pointer;
+.primarybtn:hover {
+  @include btn($grey-100, $white-color);
+  cursor: pointer;
 }
 
 .secondarybtn {
   @include btn($white-color, $grey-600);
 }
 
-.secondarybtn:hover{
-    @include btn($grey-100, $white-color);
-    padding: 23px 36px;
-    cursor: pointer;
+.secondarybtn:hover {
+  @include btn($grey-100, $white-color);
+  padding: 23px 36px;
+  cursor: pointer;
 }
 .large {
   font-family: "DM Sans";
@@ -120,17 +120,17 @@ body {
   padding: 23px 36px;
   border: 2px solid $grey-700;
 }
-.large:hover{
-    font-family: "DM Sans";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 18px;
-    border-radius: 40px;
-    height: 80px;
-    padding: 23px 36px;
-    border: 2px solid $grey-700;
-    cursor: pointer;
+.large:hover {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 18px;
+  border-radius: 40px;
+  height: 80px;
+  padding: 23px 36px;
+  border: 2px solid $grey-700;
+  cursor: pointer;
 }
 
 .small {
@@ -212,7 +212,7 @@ body {
 }
 
 .features {
-    margin: 16px;
+  margin: 16px;
   .feature-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -256,148 +256,194 @@ body {
   gap: 24px;
   margin: 16px;
 }
-.class-profile {
-    border: 2px solid $grey-700;
+
+footer {
+  margin: 0 auto;
+  max-width: 1220px;
+  height: 464px;
+
+  .footer-container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding-top: 80px;
+    padding-bottom: 60px;
+    border-top: 2px solid $grey-100;
+    border-bottom: 2px solid $grey-100;
+
+    #nav-footer {
+      display: flex;
+      color: $grey-100;
+      font-family: "DM Sans";
+      flex-direction: row;
+      justify-content: center;
+      gap: 40px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      list-style: none;
+    }
+    #social-nav {
+      font-size: 36px;
+      display: flex;
+      gap: 16px;
+      margin: 40px;
+      justify-content: space-around;
+      list-style: none;
+    }
+  }
+  #copyright {
+    display: flex;
+    font-family: "DM Sans";
+    margin-top: 30px;
+    color: $grey-100;
+    flex-direction: row;
     justify-content: center;
-    width: 400px;
+    list-style: none;
+    border: 2px, solid;
+  }
+}
+
+.class-profile {
+  border: 2px solid $grey-700;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
 }
 
 .class-profile:hover {
-    border: 2px solid $grey-100;
-    cursor: pointer;
+  border: 2px solid $grey-100;
+  cursor: pointer;
 }
 .profile {
-    border-radius: 100px;
-    height: 150px;
+  border-radius: 100px;
+  height: 150px;
 }
-
-
 
 ////////// CONTACT US STYLES ////////////////
 
 .contact-us-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+
+  .contact-info {
     display: flex;
-    justify-content: space-between;
-    gap: 2rem;
+    flex-direction: column;
+    gap: 8px;
 
-    .contact-info {
+    span {
+      @include single-text-large();
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      li {
+        padding: 0.5rem 0;
         display: flex;
-        flex-direction: column;
-        gap: 8px;
+        align-items: center;
+        gap: 1rem;
 
-        span {
-            @include single-text-large()
-        }
-
-        ul { 
-            list-style: none;
-            padding: 0;
-            li {
-                padding: 0.5rem 0;
-                display: flex;
-                align-items: center;
-                gap: 1rem;
-
-                font-family: "DM Sans";
-                font-style: normal;
-                font-weight: 400;
-                font-size: 18px;
-                line-height: 30px;
-                color: $grey-500;
-            }
-        }
+        font-family: "DM Sans";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 30px;
+        color: $grey-500;
+      }
     }
-    form {
-        background-color: #F2F1FA;
-        border-radius: 25px;
-        display: grid;
-        grid-template-columns: repeat(2, 256px);
-        padding: 65px 40px;
-        gap: 32px;
-        
-        div {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
+  }
+  form {
+    background-color: #f2f1fa;
+    border-radius: 25px;
+    display: grid;
+    grid-template-columns: repeat(2, 256px);
+    padding: 65px 40px;
+    gap: 32px;
 
-            label {
-                font-family: 'DM Sans';
-                font-style: normal;
-                font-weight: 700;
-                font-size: 16px;
-                line-height: 18px;
-                color: $grey-900;
-            }
+    div {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
 
-            input, textarea {
-                border-radius: 30px;
-                border: 0;
-                padding: 1.5rem 2rem;
+      label {
+        font-family: "DM Sans";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 18px;
+        color: $grey-900;
+      }
 
-                font-family: "DM Sans";
-                font-style: normal;
-                font-weight: 400;
-                font-size: 18px;
-                line-height: 30px;
-                
-            }
-            input::placeholder, textarea::placeholder {
-                font-family: "DM Sans";
-                font-style: normal;
-                font-weight: 400;
-                font-size: 18px;
-                line-height: 30px;
-                opacity: 80%;
-            }
-        }
+      input,
+      textarea {
+        border-radius: 30px;
+        border: 0;
+        padding: 1.5rem 2rem;
 
-        #fmessage {
-            grid-column: span 2;
-
-            textarea {
-                resize: none;
-                height: 100px;
-            }
-        }
+        font-family: "DM Sans";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 30px;
+      }
+      input::placeholder,
+      textarea::placeholder {
+        font-family: "DM Sans";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 30px;
+        opacity: 80%;
+      }
     }
+
+    #fmessage {
+      grid-column: span 2;
+
+      textarea {
+        resize: none;
+        height: 100px;
+      }
+    }
+  }
 }
 
 @media only screen and (max-width: 1220px) {
-    .contact-us-container {
-        margin: 25px;
-        flex-direction: column;
+  .contact-us-container {
+    margin: 25px;
+    flex-direction: column;
 
-        .contact-info {
-            align-items: center;
+    .contact-info {
+      align-items: center;
 
-            p {
-                text-align: center;
-            }
-        }
-        form {
-            display: flex;
-            flex-direction: column;  
-            padding: 25px; 
-            div {
-                input, textarea {
-                    border-radius: 30px;
-                    border: 0;
-                    padding: 1rem 1.3rem;
-                    
-                }
-                input::placeholder, textarea::placeholder {
-                    font-family: "DM Sans";
-                    font-style: normal;
-                    font-weight: 400;
-                    font-size: 14px;
-                    line-height: 24px;
-                    opacity: 80%;
-                }
-            }
-            
-        }
+      p {
+        text-align: center;
+      }
     }
+    form {
+      display: flex;
+      flex-direction: column;
+      padding: 25px;
+      div {
+        input,
+        textarea {
+          border-radius: 30px;
+          border: 0;
+          padding: 1rem 1.3rem;
+        }
+        input::placeholder,
+        textarea::placeholder {
+          font-family: "DM Sans";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 24px;
+          opacity: 80%;
+        }
+      }
+    }
+  }
 }
