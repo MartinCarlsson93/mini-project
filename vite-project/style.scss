@@ -1,0 +1,66 @@
+$primary-color: #5D5A88;
+$secondary-color: #868593;
+$font-stack: DM Sans, sans-serif, Arial, Helvetica;
+
+p {
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+}
+h1 {
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 66px;
+}
+h2 {
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 46px;
+}
+
+h4 {
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 28px;
+}
+main {
+    margin: 0 auto;
+    max-width: 1220px;
+}
+
+body {
+    margin: 0 auto;
+}
+.top {
+    height: 118px;
+    background-color: $primary-color;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+}
+
+.wrapper {
+    
+}
+
+.logo {
+    width: 200px;
+    height: auto;
+}
+.nav {
+    display: flex;
+    flex-direction: row;
+    gap: 1.3rem;
+    list-style: none;
+}
+
