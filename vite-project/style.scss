@@ -193,3 +193,47 @@ body {
   display: flex;
   flex-direction: row;
 }
+
+footer {
+  width: 1220px;
+  height: 464px;
+
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    padding-top: 80px;
+    padding-bottom: 60px;
+    border-top: 2px solid lightgrey;
+    border-bottom: 2px solid lightgrey;
+
+    #nav-footer {
+      display: flex;
+      color: $secondary-color;
+      font-family: "DM Sans";
+      flex-direction: row;
+      justify-content: center;
+      gap: 40px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      list-style: none;
+    }
+    #social-nav {
+      font-size: 36px;
+      display: flex;
+      margin: 40px;
+      justify-content: space-around;
+      list-style: none;
+    }
+  }
+  #copyright {
+    display: flex;
+    font-family: "DM Sans";
+    margin-top: 30px;
+    color: $secondary-color;
+    flex-direction: row;
+    justify-content: center;
+    list-style: none;
+    border: 2px, solid;
+  }
+}
