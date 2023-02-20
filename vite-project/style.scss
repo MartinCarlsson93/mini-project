@@ -1,6 +1,15 @@
-$primary-color: #5d5a88;
-$secondary-color: #868593;
+$grey-1000: #0c0e0f;
+$grey-900: #181b1f;
+$grey-800: #24292e;
+$grey-700: #30363d;
+$grey-600: #3c444d;
+$grey-500: #47525c;
+$grey-400: #535f6b;
+$grey-300: #5f6d7a;
+$grey-200: #6b7a8a;
+$grey-100: #778899;
 $white-color: white;
+$black-color: #000000;
 $font-stack: DM Sans, sans-serif, Arial, Helvetica;
 
 p {
@@ -9,6 +18,7 @@ p {
   font-weight: 400;
   font-size: 18px;
   line-height: 30px;
+  color: $grey-300;
 }
 
 a {
@@ -20,21 +30,32 @@ h1 {
   font-weight: 700;
   font-size: 56px;
   line-height: 66px;
+  color: $black-color;
 }
 h2 {
+  margin: 0;
   font-family: "DM Sans";
   font-style: normal;
   font-weight: 700;
   font-size: 36px;
   line-height: 46px;
+  color: $grey-800;
 }
-
+h3 {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 28px;
+  color: $grey-700;
+}
 h4 {
   font-family: "DM Sans";
   font-style: normal;
   font-weight: 700;
   font-size: 22px;
   line-height: 28px;
+  color: $grey-600;
 }
 main {
   margin: 0 auto;
@@ -43,6 +64,18 @@ main {
 
 body {
   margin: 0 auto;
+}
+
+@mixin single-text-large {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  color: $grey-500;
 }
 
 // Buttons
@@ -59,13 +92,23 @@ body {
 }
 
 .primarybtn {
-  @include btn($primary-color, $white-color);
+  @include btn($grey-600, $white-color);
+}
+
+.primarybtn:hover {
+  @include btn($grey-100, $white-color);
+  cursor: pointer;
 }
 
 .secondarybtn {
-  @include btn($white-color, $primary-color);
+  @include btn($white-color, $grey-600);
 }
 
+.secondarybtn:hover {
+  @include btn($grey-100, $white-color);
+  padding: 23px 36px;
+  cursor: pointer;
+}
 .large {
   font-family: "DM Sans";
   font-style: normal;
@@ -75,7 +118,19 @@ body {
   border-radius: 40px;
   height: 80px;
   padding: 23px 36px;
-  border: 2px solid $secondary-color;
+  border: 2px solid $grey-700;
+}
+.large:hover {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 18px;
+  border-radius: 40px;
+  height: 80px;
+  padding: 23px 36px;
+  border: 2px solid $grey-700;
+  cursor: pointer;
 }
 
 .small {
@@ -93,7 +148,7 @@ body {
   font-weight: 400;
   font-size: 18px;
   line-height: 18px;
-  color: $primary-color;
+  color: $grey-700;
 }
 
 .top {
@@ -129,6 +184,7 @@ body {
   overflow: hidden;
   grid-template-columns: repeat(2, 1fr);
   gap: 32px;
+  margin: 16px;
   grid-template-areas: "info-container img-container";
 }
 .info-container {
@@ -156,6 +212,7 @@ body {
 }
 
 .features {
+  margin: 16px;
   .feature-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -166,20 +223,23 @@ body {
     #card1 {
       display: grid;
       grid-area: card1;
-      background-color: cyan;
-      height: 80px;
+      height: auto;
+      border: 2px solid $grey-400;
+      padding: 12px;
     }
     #card2 {
       display: grid;
       grid-area: card2;
-      background-color: salmon;
-      height: 80px;
+      border: 2px solid $grey-400;
+      height: auto;
+      padding: 12px;
     }
     #card3 {
       display: grid;
       grid-area: card3;
-      background-color: yellow;
+      border: 2px solid $grey-400;
       height: auto;
+      padding: 12px;
     }
   }
 }
@@ -188,10 +248,13 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin: 16px;
 }
-.card-contaier {
+.card-container {
   display: flex;
   flex-direction: row;
+  gap: 24px;
+  margin: 16px;
 }
 
 footer {
@@ -235,5 +298,149 @@ footer {
     justify-content: center;
     list-style: none;
     border: 2px, solid;
+  }
+}
+.class-profile {
+  border: 2px solid $grey-700;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+}
+
+.class-profile:hover {
+  border: 2px solid $grey-100;
+  cursor: pointer;
+}
+.profile {
+  border-radius: 100px;
+  height: 150px;
+}
+
+////////// CONTACT US STYLES ////////////////
+
+.contact-us-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    span {
+      @include single-text-large();
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      li {
+        padding: 0.5rem 0;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        font-family: "DM Sans";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 30px;
+        color: $grey-500;
+      }
+    }
+  }
+  form {
+    background-color: #f2f1fa;
+    border-radius: 25px;
+    display: grid;
+    grid-template-columns: repeat(2, 256px);
+    padding: 65px 40px;
+    gap: 32px;
+
+    div {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+
+      label {
+        font-family: "DM Sans";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 18px;
+        color: $grey-900;
+      }
+
+      input,
+      textarea {
+        border-radius: 30px;
+        border: 0;
+        padding: 1.5rem 2rem;
+
+        font-family: "DM Sans";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 30px;
+      }
+      input::placeholder,
+      textarea::placeholder {
+        font-family: "DM Sans";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 30px;
+        opacity: 80%;
+      }
+    }
+
+    #fmessage {
+      grid-column: span 2;
+
+      textarea {
+        resize: none;
+        height: 100px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1220px) {
+  .contact-us-container {
+    margin: 25px;
+    flex-direction: column;
+
+    .contact-info {
+      align-items: center;
+
+      p {
+        text-align: center;
+      }
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      padding: 25px;
+      div {
+        input,
+        textarea {
+          border-radius: 30px;
+          border: 0;
+          padding: 1rem 1.3rem;
+        }
+        input::placeholder,
+        textarea::placeholder {
+          font-family: "DM Sans";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 24px;
+          opacity: 80%;
+        }
+      }
+    }
   }
 }

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <title>Vite App</title>
+</head>
+
+<body>
+    <header class="top">
+        <div class="nav-wrapper">
+            <div class="logo"><img src="" alt=""></div>
+            <ul class="nav">
+                <li>
+                    <a class="link" href="/home">Home</a>
+                </li>
+                <li>
+                    <a class="link" href="/about">About</a>
+                </li>
+                <li>
+                    <a class="primarybtn small" href="/">Get in touch</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <div class="contact-us-container">
+            <div class="contact-info">
+                <span>CONTACT US</span>
+                <h2>Get in touch today</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit nulla adipiscing tincidunt interdum tellus du.
+                </p>
+                <ul>
+                    <li> <img src="/src/Email.svg" alt="email icon"> contact@company.com</li>
+                    <li><img src="/src/Phone.svg" alt="phone icon"> (123) 456 - 789</li>
+                    <li><img src="/src/Mark.svg" alt="Mark icon">Solnavägen 3H <br>113 63 Stockholm</li>
+                </ul>
+            </div>
+            <form>
+                <div id="fname">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" placeholder="John Carter">
+                </div>
+
+                <div id="femail">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" placeholder="example@email.com">
+                </div>
+
+                <div id="fphone">
+                    <label for="phone">Phone</label>
+                    <input type="number" name="phone" placeholder="(123) 456-789">
+                </div>
+
+                <div id="fcompany">
+                    <label for="company">Company</label>
+                    <input type="text" name="company" placeholder="Company">
+                </div>
+
+                <div id="fmessage">
+                    <label for="message">Message</label>
+                    <textarea name="message" cols="30" rows="10"
+                        placeholder="Please type your message here..."></textarea>
+                </div>
+                <button type="submit" id="fsubmit" class="primarybtn large">Send message</button>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <img src="/logo" alt="">
+        <div>
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Contact</li>
+            </ul>
+        </div>
+    </footer>
+
+    <script type="module" src="/main.js"></script>
+
+</body>
+
+</html>
