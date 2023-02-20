@@ -22,6 +22,7 @@ h1 {
   line-height: 66px;
 }
 h2 {
+    margin: 0;
   font-family: "DM Sans";
   font-style: normal;
   font-weight: 700;
@@ -44,6 +45,18 @@ main {
 body {
   margin: 0 auto;
 }
+
+@mixin single-text-large {
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 20px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+
+    color: $secondary-color
+};
 
 // Buttons
 
@@ -192,4 +205,132 @@ body {
 .card-contaier {
   display: flex;
   flex-direction: row;
+}
+
+
+
+////////// CONTACT US STYLES ////////////////
+
+.contact-us-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+
+    .contact-info {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        span {
+            @include single-text-large()
+        }
+
+        ul { 
+            list-style: none;
+            padding: 0;
+            li {
+                padding: 0.5rem 0;
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+
+                font-family: "DM Sans";
+                font-style: normal;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 30px;
+                color: $secondary-color;
+            }
+        }
+    }
+    form {
+        background-color: #F2F1FA;
+        border-radius: 25px;
+        display: grid;
+        grid-template-columns: repeat(2, 256px);
+        padding: 65px 40px;
+        gap: 32px;
+        
+        div {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+
+            label {
+                font-family: 'DM Sans';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 18px;
+                color: $primary-color;
+            }
+
+            input, textarea {
+                border-radius: 30px;
+                border: 0;
+                padding: 1.5rem 2rem;
+
+                font-family: "DM Sans";
+                font-style: normal;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 30px;
+                
+            }
+            input::placeholder, textarea::placeholder {
+                font-family: "DM Sans";
+                font-style: normal;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 30px;
+                opacity: 80%;
+            }
+        }
+
+        #fmessage {
+            grid-column: span 2;
+
+            textarea {
+                resize: none;
+                height: 100px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1220px) {
+    .contact-us-container {
+        margin: 25px;
+        flex-direction: column;
+
+        .contact-info {
+            align-items: center;
+
+            p {
+                text-align: center;
+            }
+        }
+        form {
+            display: flex;
+            flex-direction: column;  
+            padding: 25px; 
+            div {
+                input, textarea {
+                    border-radius: 30px;
+                    border: 0;
+                    padding: 1rem 1.3rem;
+                    
+                }
+                input::placeholder, textarea::placeholder {
+                    font-family: "DM Sans";
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 24px;
+                    opacity: 80%;
+                }
+            }
+            
+        }
+    }
 }
