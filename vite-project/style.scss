@@ -75,7 +75,7 @@ body {
     letter-spacing: 0.1em;
     text-transform: uppercase;
 
-    color: $secondary-color
+    color: $grey-500
 };
 
 // Buttons
@@ -268,7 +268,6 @@ body {
 .class-profile:hover {
     border: 2px solid $grey-100;
     cursor: pointer;
-    box-shadow: #181b1f;
 }
 .profile {
     border-radius: 100px;
@@ -307,7 +306,7 @@ body {
                 font-weight: 400;
                 font-size: 18px;
                 line-height: 30px;
-                color: $secondary-color;
+                color: $grey-500;
             }
         }
     }
@@ -330,7 +329,7 @@ body {
                 font-weight: 700;
                 font-size: 16px;
                 line-height: 18px;
-                color: $primary-color;
+                color: $grey-900;
             }
 
             input, textarea {
