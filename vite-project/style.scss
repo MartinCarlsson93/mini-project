@@ -1,154 +1,195 @@
-$primary-color: #5D5A88;
+$primary-color: #5d5a88;
 $secondary-color: #868593;
 $white-color: white;
 $font-stack: DM Sans, sans-serif, Arial, Helvetica;
 
 p {
-    font-family: 'DM Sans';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 30px;
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 h1 {
-    font-family: 'DM Sans';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 56px;
-    line-height: 66px;
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 66px;
 }
 h2 {
-    font-family: 'DM Sans';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 46px;
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 46px;
 }
 
 h4 {
-    font-family: 'DM Sans';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 22px;
-    line-height: 28px;
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 28px;
 }
 main {
-    margin: 0 auto;
-    max-width: 1220px;
+  margin: 0 auto;
+  max-width: 1220px;
 }
 
 body {
-    margin: 0 auto;
+  margin: 0 auto;
 }
 
 // Buttons
 
-@mixin btn ($background-color, $text-color) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem 1.3rem;
-    gap: 8px;
-    background-color: $background-color;
-    color: $text-color;
-    border: 0;
+@mixin btn($background-color, $text-color) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 1.3rem;
+  gap: 8px;
+  background-color: $background-color;
+  color: $text-color;
+  border: 0;
 }
 
-
 .primarybtn {
-    @include btn($primary-color, $white-color)
+  @include btn($primary-color, $white-color);
+}
+
+.secondarybtn {
+  @include btn($white-color, $primary-color);
 }
 
 .large {
-    font-family: 'DM Sans';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 18px;
-    border-radius: 30px;
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 18px;
+  border-radius: 40px;
+  height: 80px;
+  padding: 23px 36px;
+  border: 2px solid $secondary-color;
 }
 
 .small {
-    font-family: 'DM Sans';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 18px;
-    border-radius: 30px;
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  border-radius: 30px;
 }
 
 .link {
-    font-family: 'DM Sans';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 18px;
-    color: $primary-color;
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 18px;
+  color: $primary-color;
 }
 
-
 .top {
-    height: 118px;
-    // background-color: $primary-color;
-   
+  height: 118px;
+  // background-color: $primary-color;
 }
 
 .nav-wrapper {
-    margin: 0 auto;
-    height: 100%;
-    max-width: 1220px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+  margin: 0 auto;
+  height: 100%;
+  max-width: 1220px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .logo {
-    width: 200px;
-    height: auto;
+  width: 200px;
+  height: auto;
 }
 .nav {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 1.3rem;
-    list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1.3rem;
+  list-style: none;
+  height: 50px;
 }
 
 .hero {
-    display: grid;
-    overflow: hidden;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 32px;
-    grid-template-areas: "info-container img-container";
+  display: grid;
+  overflow: hidden;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  grid-template-areas: "info-container img-container";
 }
 .info-container {
-    display: grid;
-    grid-area: info-container;
-    padding: 8px;
+  display: grid;
+  grid-area: info-container;
+  padding: 8px;
 
-    .btn-container {
-        display: flex;
-        flex-direction: row;
-        gap: 1.3rem;
-        justify-content: center;
-    }
+  .btn-container {
+    display: flex;
+    flex-direction: row;
+    gap: 1.3rem;
+  }
 }
 
 .img-container {
-    display: grid;
-    grid-area: img-container;
-    height: 600px;
-    border-radius: 30px;
-    overflow: hidden;
+  display: grid;
+  grid-area: img-container;
+  height: 600px;
+  border-radius: 30px;
+  overflow: hidden;
 
-    img {
-       object-fit: contain; 
-    }
+  img {
+    object-fit: contain;
+  }
 }
 
+.features {
+  .feature-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+    grid-template-areas:
+      "card1 card3"
+      "card2 card3";
+    #card1 {
+      display: grid;
+      grid-area: card1;
+      background-color: cyan;
+      height: 80px;
+    }
+    #card2 {
+      display: grid;
+      grid-area: card2;
+      background-color: salmon;
+      height: 80px;
+    }
+    #card3 {
+      display: grid;
+      grid-area: card3;
+      background-color: yellow;
+      height: auto;
+    }
+  }
+}
 
+.team {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.card-contaier {
+  display: flex;
+  flex-direction: row;
+}
