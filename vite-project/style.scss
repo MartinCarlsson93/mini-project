@@ -1,6 +1,17 @@
 $primary-color: #5d5a88;
 $secondary-color: #868593;
+$grey-1000: #0c0e0f;
+$grey-900: #181b1f;
+$grey-800: #24292e;
+$grey-700: #30363d;
+$grey-600: #3c444d;
+$grey-500: #47525c;
+$grey-400: #535f6b;
+$grey-300: #5f6d7a;
+$grey-200: #6b7a8a;
+$grey-100: #778899;
 $white-color: white;
+$black-color: #000000;
 $font-stack: DM Sans, sans-serif, Arial, Helvetica;
 
 p {
@@ -9,6 +20,7 @@ p {
   font-weight: 400;
   font-size: 18px;
   line-height: 30px;
+  color: $grey-300;
 }
 
 a {
@@ -20,6 +32,7 @@ h1 {
   font-weight: 700;
   font-size: 56px;
   line-height: 66px;
+  color: $black-color;
 }
 h2 {
   font-family: "DM Sans";
@@ -27,14 +40,23 @@ h2 {
   font-weight: 700;
   font-size: 36px;
   line-height: 46px;
+  color: $grey-800;
 }
-
+h3 {
+    font-family: "DM Sans";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 28px;
+    color: $grey-700;
+  }
 h4 {
   font-family: "DM Sans";
   font-style: normal;
   font-weight: 700;
   font-size: 22px;
   line-height: 28px;
+  color: $grey-600;
 }
 main {
   margin: 0 auto;
@@ -58,12 +80,17 @@ body {
   border: 0;
 }
 
+btn :hover {
+    background-color: $grey-100;
+    color:$white-color;
+}
+
 .primarybtn {
-  @include btn($primary-color, $white-color);
+  @include btn($grey-600, $white-color);
 }
 
 .secondarybtn {
-  @include btn($white-color, $primary-color);
+  @include btn($white-color, $grey-600);
 }
 
 .large {
@@ -75,7 +102,7 @@ body {
   border-radius: 40px;
   height: 80px;
   padding: 23px 36px;
-  border: 2px solid $secondary-color;
+  border: 2px solid $grey-700;
 }
 
 .small {
@@ -93,7 +120,7 @@ body {
   font-weight: 400;
   font-size: 18px;
   line-height: 18px;
-  color: $primary-color;
+  color: $grey-700;
 }
 
 .top {
@@ -166,19 +193,19 @@ body {
     #card1 {
       display: grid;
       grid-area: card1;
-      background-color: cyan;
-      height: 80px;
+      height: auto;
+      border: 2px solid $grey-400;
     }
     #card2 {
       display: grid;
       grid-area: card2;
-      background-color: salmon;
-      height: 80px;
+      border: 2px solid $grey-400;
+      height: auto;
     }
     #card3 {
       display: grid;
       grid-area: card3;
-      background-color: yellow;
+      border: 2px solid $grey-400;
       height: auto;
     }
   }
