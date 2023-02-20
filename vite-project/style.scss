@@ -171,6 +171,7 @@ body {
   overflow: hidden;
   grid-template-columns: repeat(2, 1fr);
   gap: 32px;
+  margin: 16px;
   grid-template-areas: "info-container img-container";
 }
 .info-container {
@@ -198,6 +199,7 @@ body {
 }
 
 .features {
+    margin: 16px;
   .feature-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -233,8 +235,29 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin: 16px;
 }
-.card-contaier {
+.card-container {
   display: flex;
   flex-direction: row;
+  gap: 24px;
+  margin: 16px;
+}
+.class-profile {
+    border: 2px solid $grey-700;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+}
+
+.class-profile:hover {
+    border: 2px solid $grey-100;
+    cursor: pointer;
+    box-shadow: #181b1f;
+}
+.profile {
+    border-radius: 100px;
+    height: 150px;
 }
