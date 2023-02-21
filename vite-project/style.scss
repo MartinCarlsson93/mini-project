@@ -549,6 +549,42 @@ footer {
     }
   }
 }
+@media (max-width: 1220px) {
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .info-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  .features {
+    margin: 16px;
+    .feature-container {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  .team {
+    .card-container {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 100px;   
+  }
+}
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  #copyright {
+    text-align: center;
+    padding-bottom: 24px;
+  }
+}
 
 @media (max-width: 600px) {
   .hamburger {
