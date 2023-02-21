@@ -256,11 +256,18 @@ body {
   gap: 24px;
   margin: 16px;
 }
+.ama-logo{
+  height: 180px;
+}
 
 footer {
   margin: 0 auto;
   max-width: 1220px;
   height: 464px;
+
+  .ama-logo{
+    margin-top: -40px;
+  }
 
   .footer-container {
     display: flex;
@@ -286,7 +293,7 @@ footer {
       font-size: 36px;
       display: flex;
       gap: 16px;
-      margin: 40px;
+      margin: 25px;
       justify-content: space-around;
       list-style: none;
     }
@@ -410,11 +417,15 @@ footer {
     }
   }
 }
+.main-container {
+  margin-bottom: 80px;
+}
 
 @media only screen and (max-width: 1220px) {
   .contact-us-container {
     margin: 25px;
     flex-direction: column;
+    margin-bottom: 80px;
 
     .contact-info {
       align-items: center;
