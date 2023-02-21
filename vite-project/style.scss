@@ -21,6 +21,15 @@ p {
   color: $grey-300;
 }
 
+q {
+  font-family: "DM Sans";
+  font-style:italic;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  color: $grey-100;
+}
+
 a {
   text-decoration: none;
 }
@@ -203,6 +212,7 @@ body {
   display: grid;
   grid-area: img-container;
   height: 600px;
+  width: 600px;
   border-radius: 30px;
   overflow: hidden;
 
@@ -458,3 +468,130 @@ footer {
     }
   }
 }
+
+//// ABOUT STYLES /////
+.about {
+  padding: 16px;
+}
+.about-us {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 24px;
+  grid-template-areas: 
+  "about-us-text"
+  "about-us-image";
+}
+.column-section {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 24px;
+  grid-template-areas: "as-web-firm"
+  "language-model";
+
+  .as-web-firm{
+    grid-area: as-web-firm;
+  }
+  .language-model{
+    grid-area: language-model;
+  }
+}
+.class-profile {
+  border: 2px solid $grey-700;
+  display: flex;
+  padding: 16px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+}
+  .customers {
+      display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 16px;
+  }
+
+  .customer-profile {
+  border: 2px solid $grey-700;
+  display: flex;
+  padding: 16px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 400px;
+}
+
+.customer-profile:hover {
+  border: 2px solid $grey-100;
+  cursor: pointer;
+}
+.customer-logo {
+  border-radius: 100px;
+  height: 150px;
+  max-width: 150px;
+}
+.about-img-container {
+  display: grid;
+  grid-area: img-container;
+  max-height: 600px;
+  height: auto;
+  max-width: 600px;
+  width: auto;
+  border-radius: 30px;
+  overflow: hidden;
+  grid-area: about-us-image;
+
+  img {
+    object-fit: contain;
+  }
+}
+.about-us-text {
+  grid-area: about-us-text;
+}
+
+.priorities {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 24px;
+}
+
+.prioritie-one {
+  width: 250px;
+}
+.prioritie-two {
+  max-width: 250px;
+}
+
+.more-about {
+  margin-top: 40px;
+}
+.about-card-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin: 16px;
+}
+
+@media screen and (min-width: 660px) {
+.about-us {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  grid-template-areas: "about-us-text about-us-image";
+}
+
+.column-section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  grid-template-areas: "as-web-firm language-model";
+}
+
+.about-card-container {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  margin: 16px;
+}}
