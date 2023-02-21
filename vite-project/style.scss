@@ -517,6 +517,10 @@ footer {
 }
 
 //Mobile view --------------------------------------------------------------
+.hamburger {
+  display: none;
+}
+
 .mobile-nav {
   position: fixed;
   top: 0;
@@ -588,6 +592,7 @@ footer {
 
 @media (max-width: 600px) {
   .hamburger {
+    display: block;
     cursor: pointer;
     padding-right: 14px;
   }
