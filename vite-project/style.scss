@@ -71,7 +71,13 @@ main {
   max-width: 1220px;
   display: flex;
   flex-direction: column;
-  gap: 200px;
+  gap: 24px;
+}
+
+@media (min-width: 660px) {
+  main {
+    gap: 200px;
+  }
 }
 
 body {
@@ -270,7 +276,7 @@ body {
   .card-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 200px;
+    gap: 24px;
 
     div:nth-child(2) {
       grid-row: span 2;
@@ -699,6 +705,9 @@ footer {
 }
 
 @media screen and (min-width: 660px) {
+  .card-container {
+    gap: 200px;
+  }
   .about-us {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
