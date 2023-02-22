@@ -31,6 +31,12 @@ q {
 }
 
 a {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  color: $grey-300;
   text-decoration: none;
 }
 h1 {
@@ -82,6 +88,7 @@ main {
 
 body {
   margin: 0 auto;
+  display: none;
 }
 
 @mixin single-text-large {
@@ -192,23 +199,28 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 1.3rem;
+  gap: 3rem;
   list-style: none;
   height: 50px;
 }
 
 .hero {
+  margin-top: 48px;
   display: grid;
   overflow: hidden;
   grid-template-columns: repeat(2, 1fr);
   gap: 32px;
-  margin: 16px;
   grid-template-areas: "info-container img-container";
 }
+
 .info-container {
   display: grid;
   grid-area: info-container;
   padding: 8px;
+
+  h1 {
+    margin-bottom: 0;
+  }
 
   .btn-container {
     display: flex;
@@ -226,39 +238,57 @@ body {
   overflow: hidden;
 
   img {
-    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 }
 
 .features {
-  margin: 16px;
+  h2, p{
+    max-width: 800px;
+  }
+
   .feature-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 32px;
     grid-template-areas:
-      "card1 card3"
-      "card2 card3";
+      "card3 card1"
+      "card3 card2";
+
+    .card-small, .card-large {
+      padding: 24px;
+      background-color: #F2F1FA;
+      border-radius: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      padding-bottom: 48px;
+    }
+    h4, p{
+      margin: 0;
+      max-width: 80%;
+    }
+
     #card1 {
-      display: grid;
       grid-area: card1;
-      height: auto;
-      border: 2px solid $grey-400;
-      padding: 12px;
     }
     #card2 {
-      display: grid;
       grid-area: card2;
-      border: 2px solid $grey-400;
-      height: auto;
-      padding: 12px;
     }
     #card3 {
-      display: grid;
       grid-area: card3;
-      border: 2px solid $grey-400;
-      height: auto;
-      padding: 12px;
+      background-image: url("src/web-production.jpeg");
+      background-repeat: no-repeat;
+      background-size: 140%;
+
+      h4 {
+        color: $white-color
+      }
+      p{
+        color: #F2F1FA;
+      }
     }
   }
 }
@@ -276,7 +306,6 @@ body {
   .card-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 24px;
 
     div:nth-child(2) {
       grid-row: span 2;
@@ -369,6 +398,7 @@ footer {
       padding-top: 20px;
       padding-bottom: 20px;
       list-style: none;
+
     }
     #social-nav {
       font-size: 36px;
@@ -659,6 +689,7 @@ footer {
   border-radius: 100px;
   height: 150px;
   max-width: 150px;
+  object-fit: contain;
 }
 .about-img-container {
   display: grid;
@@ -672,7 +703,9 @@ footer {
   grid-area: about-us-image;
 
   img {
-    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 }
 .about-us-text {
