@@ -243,7 +243,8 @@ body {
 }
 
 .features {
-  h2, p{
+  h2,
+  p {
     max-width: 800px;
   }
 
@@ -255,16 +256,18 @@ body {
       "card3 card1"
       "card3 card2";
 
-    .card-small, .card-large {
+    .card-small,
+    .card-large {
       padding: 24px;
-      background-color: #F2F1FA;
+      background-color: #f2f1fa;
       border-radius: 20px;
       display: flex;
       flex-direction: column;
       gap: 24px;
       padding-bottom: 48px;
     }
-    h4, p{
+    h4,
+    p {
       margin: 0;
       max-width: 80%;
     }
@@ -282,10 +285,10 @@ body {
       background-size: 140%;
 
       h4 {
-        color: $white-color
+        color: $white-color;
       }
-      p{
-        color: #F2F1FA;
+      p {
+        color: #f2f1fa;
       }
     }
   }
@@ -396,7 +399,6 @@ footer {
       padding-top: 20px;
       padding-bottom: 20px;
       list-style: none;
-
     }
     #social-nav {
       font-size: 36px;
@@ -611,9 +613,9 @@ footer {
     .card-container {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 100px;   
+      gap: 100px;
+    }
   }
-}
   .footer-container {
     flex-direction: column;
     align-items: center;
@@ -763,27 +765,28 @@ footer {
 
 /// Preview work
 .jumping-frogs {
-  display: grid;
-  grid-template-columns: repeat(1fr);
-  grid-template-areas: "code-snippet" 
-  "animation-box";
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .code-snippet {
-  grid-area: code-snippet;
-  width: 400px;
+  width: 100%;
 }
-.code-text{
-  
+.code-text {
 }
 .animation-box {
-  grid-area: animation-box;
+}
+
+.preview {
+  display: flex;
+  align-items: center;
 }
 
 @media screen and (min-width: 660px) {
   .jumping-frogs {
-    display: grid;
-    grid-template-columns: repeat(1fr 2fr);
-    grid-template-areas: "code-snippet animation-box";
+    align-items: center;
+    justify-content: center;
+    max-width: 800px;
   }
 }
 
