@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <title>About</title>
+  </head>
+  <body>
+    <header class="top">
+      <div class="nav-wrapper">
+        <a href="/">
+          <img
+            class="ama-logo"
+            src="/src/logo/logo-transparent.png"
+            alt="AMA web logo"
+          />
+        </a>
+        <ul class="nav">
+          <li>
+            <a class="link" href="/">Home</a>
+          </li>
+          <li>
+            <a class="link" href="/about.html">About</a>
+          </li>
+          <li>
+            <a class="primarybtn small" href="/contact-us.html">Get in touch</a>
+          </li>
+        </ul>
+        <a class="hamburger"><img src="./src/hamburger.menu.svg" alt="" /> </a>
+      </div>
+      <nav class="mobile-nav">
+        <a class="close-btn"
+          ><img src="./src/Close.svg" alt="Close-button"
+        /></a>
+        <div>
+          <a href="/" class="a-mobile-nav">Home</a>
+          <a href="/about.html" class="a-mobile-nav">About</a>
+          <a class="primarybtn small" href="/contact-us.html">Get in touch</a>
+        </div>
+      </nav>
+    </header>
+    <main class="preview">
+      <section class="jumping-frogs">
+        <div class="code-snippet">
+          <pre>
+          <code class="code-text">
+            const ball1 = document.getElementById("ball1"); 
+            const ball2 = document.getElementById("ball2"); 
+            const ball3 = document.getElementById("ball3"); 
+            const ball4 = document.getElementById("ball4"); 
+            const ball5 = document.getElementById("ball5"); 
+            const ball6 = document.getElementById("ball6"); 
+            const ball7 = document.getElementById("ball7"); 
+            const ball8 = document.getElementById("ball8"); 
+            const ball9 = document.getElementById("ball9"); 
+            const ball10 = document.getElementById("ball10"); 
+            
+            let array = [ ball1, ball2,
+            ball3, ball4, ball5, ball6, ball7, ball8, ball9, ball10, ]; 
+            
+            const box = document.getElementById("box"); 
+            function changeYforBall(ball)
+            { 
+                let movingball = ball.getBoundingClientRect(); 
+                let changedY; 
+                movingball.y = Math.ceil(Math.random() * 558); 
+                changedY = movingball.y; 
+                ball.style = `top: ${changedY}px`; 
+            } 
+
+            function resetYforBall(ball) 
+            { 
+                let movingball = ball.getBoundingClientRect(); 
+                let changedY; movingball.y = 550; 
+                changedY = movingball.y;
+                ball.style = `top: ${changedY}px; 
+                transition: top 4s ease-in`; 
+            }
+            
+            function changeball(ball, animation) 
+            { 
+                ball.style = `transform:
+                ${animation}; top:550px;`; 
+            } 
+            let timer1; 
+            let timer2; 
+            let timer3;
+            setInterval(
+                function () 
+                { 
+                    if (timer1) 
+                        { 
+                            clearTimeout(timer1); 
+                        } 
+                    if (timer2) 
+                        { 
+                            clearTimeout(timer2); 
+                        } 
+                    if (timer3) 
+                    {
+                        clearTimeout(timer3); 
+                    } 
+                    array.forEach((e) => changeYforBall(e));
+                    timer3 = setTimeout(function () { console.log("timer3");
+                    array.forEach((e) => resetYforBall(e)); }, 4000); timer1 =
+                    setTimeout(function () { console.log("timer1"); array.forEach((e) =>
+                    changeball(e, "scale(1.0, 1.0)")); }, 8300); timer2 =
+                    setTimeout(function () { console.log("timer2"); array.forEach((e) =>
+                    changeball(e, "scale(1.2, 0.9)")); }, 8000); 
+                }, 
+            8300);
+          </code>
+        </pre>
+        </div>
+        <div class="animation-box">
+          <div class="box" id="box">
+            <div class="ball" id="ball1">
+              <img src="/src/frog-face.png" />
+            </div>
+            <div class="ball" id="ball2">
+              <img src="/src/frog-face.png" />
+            </div>
+            <div class="ball" id="ball3">
+              <img src="/src/frog-face.png" />
+            </div>
+            <div class="ball" id="ball4">
+              <img src="/src/frog-face.png" />
+            </div>
+            <div class="ball" id="ball5">
+              <img src="/src/frog-face.png" />
+            </div>
+            <div class="ball" id="ball6">
+              <img src="/src/frog-face.png" />
+            </div>
+            <div class="ball" id="ball7">
+              <img src="/src/frog-face.png" />
+            </div>
+            <div class="ball" id="ball8">
+              <img src="/src/frog-face.png" />
+            </div>
+            <div class="ball" id="ball9">
+              <img src="/src/frog-face.png" />
+            </div>
+            <div class="ball" id="ball10">
+              <img src="/src/frog-face.png" />
+            </div>
+          </div>
+          <div class="bottom">
+            <img src="/src/MicrosoftTeams-image.png" />
+          </div>
+        </div>
+        <script src="./script.js"></script>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-container">
+        <a href="/">
+          <img
+            class="ama-logo"
+            src="/src/logo/logo-transparent.png"
+            alt="AMA web logo"
+          />
+        </a>
+        <ul id="nav-footer">
+          <li><a href="/">Home</a></li>
+          <li><a href="/about.html">About </a></li>
+          <li><a href="/contact-us.html">Contact </a></li>
+        </ul>
+        <ul id="social-nav">
+          <li>
+            <img
+              src="./src/Social Media Icon Square/Facebook.png"
+              alt="Facebook"
+            />
+          </li>
+          <li>
+            <img
+              src="./src/Social Media Icon Square/Twitter.png"
+              alt="Twitter"
+            />
+          </li>
+          <li>
+            <img
+              src="./src/Social Media Icon Square/Instagram.png"
+              alt="Instagram"
+            />
+          </li>
+          <li>
+            <img
+              src="./src/Social Media Icon Square/LinkedIn.png"
+              alt="LinkedIn"
+            />
+          </li>
+        </ul>
+      </div>
+      <div id="copyright">
+        Copryright © 2023 BRIX Templates | All Rights Reserved
+      </div>
+    </footer>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

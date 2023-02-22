@@ -141,8 +141,7 @@ body {
   font-size: 18px;
   line-height: 18px;
   border-radius: 40px;
-  height: 80px;
-  padding: 23px 36px;
+  padding: 4px 12px;
   border: 2px solid $grey-700;
 }
 .large:hover {
@@ -152,8 +151,7 @@ body {
   font-size: 18px;
   line-height: 18px;
   border-radius: 40px;
-  height: 80px;
-  padding: 23px 36px;
+  padding: 4px 12px;
   border: 2px solid $grey-700;
   cursor: pointer;
 }
@@ -225,7 +223,7 @@ body {
   .btn-container {
     display: flex;
     flex-direction: row;
-    gap: 1.3rem;
+    gap: 4rem;
   }
 }
 
@@ -761,4 +759,91 @@ footer {
     gap: 24px;
     margin: 16px;
   }
+}
+
+/// Preview work
+.jumping-frogs {
+  display: grid;
+  grid-template-columns: repeat(1fr);
+  grid-template-areas: "code-snippet" 
+  "animation-box";
+}
+.code-snippet {
+  grid-area: code-snippet;
+  width: 400px;
+}
+.code-text{
+  
+}
+.animation-box {
+  grid-area: animation-box;
+}
+
+@media screen and (min-width: 660px) {
+  .jumping-frogs {
+    display: grid;
+    grid-template-columns: repeat(1fr 2fr);
+    grid-template-areas: "code-snippet animation-box";
+  }
+}
+
+/// ANIMATION BONANZA
+.ball {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  transition: top 4s ease-in-out;
+}
+.ball img {
+  width: 50px;
+  height: 50px;
+}
+.bottom {
+  max-width: 800px;
+  height: 150px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.bottom img {
+  object-fit: contain;
+}
+.box {
+  position: relative;
+  margin: 0 auto;
+  background-color: lightskyblue;
+  width: 800px;
+  height: 600px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+#ball1 {
+  left: 0;
+}
+#ball4 {
+  left: 5rem;
+}
+#ball2 {
+  left: 10rem;
+}
+#ball3 {
+  left: 15rem;
+}
+#ball5 {
+  left: 20rem;
+}
+#ball6 {
+  left: 25rem;
+}
+#ball7 {
+  left: 30rem;
+}
+#ball8 {
+  left: 35rem;
+}
+#ball9 {
+  left: 40rem;
+}
+#ball10 {
+  left: 45rem;
 }
