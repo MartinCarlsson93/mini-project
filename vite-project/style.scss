@@ -141,8 +141,7 @@ body {
   font-size: 18px;
   line-height: 18px;
   border-radius: 40px;
-  height: 80px;
-  padding: 23px 36px;
+  padding: 4px 12px;
   border: 2px solid $grey-700;
 }
 .large:hover {
@@ -152,8 +151,7 @@ body {
   font-size: 18px;
   line-height: 18px;
   border-radius: 40px;
-  height: 80px;
-  padding: 23px 36px;
+  padding: 4px 12px;
   border: 2px solid $grey-700;
   cursor: pointer;
 }
@@ -225,7 +223,7 @@ body {
   .btn-container {
     display: flex;
     flex-direction: row;
-    gap: 1.3rem;
+    gap: 4rem;
   }
 }
 
@@ -245,8 +243,13 @@ body {
 }
 
 .features {
-  h2, p{
-     max-width: 800px;
+  h2,
+  p {
+    max-width: 800px;
+    h2,
+    p {
+      max-width: 800px;
+    }
   }
 
   .feature-container {
@@ -258,16 +261,18 @@ body {
       "card3 card1"
       "card3 card2";
 
-    .card-small, .card-large {
+    .card-small,
+    .card-large {
       padding: 24px;
-      background-color: #F2F1FA;
+      background-color: #f2f1fa;
       border-radius: 20px;
       display: flex;
       flex-direction: column;
       gap: 24px;
       padding-bottom: 48px;
     }
-    h4, p{
+    h4,
+    p {
       margin: 0;
       max-width: 80%;
     }
@@ -285,10 +290,10 @@ body {
       background-size: 140%;
 
       h4 {
-        color: $white-color
+        color: $white-color;
       }
-      p{
-        color: #F2F1FA;
+      p {
+        color: #f2f1fa;
       }
     }
   }
@@ -399,7 +404,6 @@ footer {
       padding-top: 20px;
       padding-bottom: 20px;
       list-style: none;
-
     }
     #social-nav {
       font-size: 36px;
@@ -614,9 +618,9 @@ footer {
     .card-container {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 100px;   
+      gap: 100px;
+    }
   }
-}
   .footer-container {
     flex-direction: column;
     align-items: center;
@@ -762,4 +766,88 @@ footer {
     gap: 24px;
     margin: 16px;
   }
+}
+
+/// Preview work
+.jumping-frogs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.code-snippet {
+  width: 100%;
+}
+
+.preview {
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (min-width: 660px) {
+  .jumping-frogs {
+    align-items: center;
+    justify-content: center;
+    max-width: 800px;
+  }
+}
+
+/// ANIMATION BONANZA
+.ball {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  transition: top 4s ease-in-out;
+}
+.ball img {
+  width: 50px;
+  height: 50px;
+}
+.bottom {
+  max-width: 800px;
+  height: 150px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.bottom img {
+  object-fit: contain;
+}
+.box {
+  position: relative;
+  margin: 0 auto;
+  background-color: lightskyblue;
+  width: 800px;
+  height: 600px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+#ball1 {
+  left: 0;
+}
+#ball4 {
+  left: 5rem;
+}
+#ball2 {
+  left: 10rem;
+}
+#ball3 {
+  left: 15rem;
+}
+#ball5 {
+  left: 20rem;
+}
+#ball6 {
+  left: 25rem;
+}
+#ball7 {
+  left: 30rem;
+}
+#ball8 {
+  left: 35rem;
+}
+#ball9 {
+  left: 40rem;
+}
+#ball10 {
+  left: 45rem;
 }
